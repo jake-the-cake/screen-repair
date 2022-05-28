@@ -52,7 +52,7 @@ const months = [
 
 const convertMonth = (monthInput, returnType) => {
 	let currentMonth;
-	months.forEach((month, i) => {
+	months.forEach((month) => {
 		if (month.num === monthInput + 1) {
 			currentMonth = month;
 		}
@@ -60,6 +60,29 @@ const convertMonth = (monthInput, returnType) => {
 	return currentMonth[returnType];
 };
 
+const convertMinutes = (minutes) => {
+	if (Number(minutes) < 10) {
+		minutes = `0${minutes}`;
+	}
+	return minutes;
+};
+
+const capitalizeFirstLetter = (word) => {
+	if (Number(word) * 0 !== 0) {
+		word = word[0].toUpperCase() + word.slice(1);
+	}
+	return word;
+};
+
+const getTimeStamp = (data) => {
+	console.log(timestamp);
+	let month = capitalizeFirstLetter(convertMonth(timestamp.getMonth(), data.month));
+	let minutes = convertMinutes(timestamp.getMinutes());
+	const date = `${month} ${timestamp.getDate()}, ${timestamp.getFullYear()}`;
+	const time = `${timestamp.getHours()}:${minutes}`;
+	return {time:time,date:date};
+}
+
 export {
-	convertMonth
+	getTimeStamp
 };

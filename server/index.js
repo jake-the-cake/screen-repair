@@ -7,13 +7,17 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 /*  misc imports */
-import { convertMonth } from '../common/dateTime.js';
+import { getTimeStamp } from '../common/dateTime.js';
+import cors from 'cors';
 
 /* init and open database */
 import mongoose from 'mongoose';
 mongoose.connect(process.env.DB)
 	.then(()=>{console.log('...data stream live')})
 	.catch(err=>console.log(err));
+
+/* config */
+app.use(cors);
 
 /* routing */
 app.get('/', (req,res) => {
@@ -26,13 +30,7 @@ const broadcastServer = (() => {
 		// okug in to port
 		app.listen(process.env.PORT || 4000);
 		// create readable timestamp for logging
-		///// todo /////
-		// make the code block below into a 'common' function
-		const timestamp = new Date();
-		let month = convertMonth(timestamp.getMonth(), 'full');
-		month = month[0].toUpperCase() + month.slice(1);
-		const date = `${month} ${timestamp.getDay()}, ${timestamp.getFullYear()}`;
-		const time = `${timestamp.getHours()}:${timestamp.getMinutes()}`;
+		const { date, time } = getTimeStamp({month:'full'});
 		// display success
 		console.log(`Server activated --> ${date} @ ${time}`);
 	}
