@@ -1,0 +1,24 @@
+{
+  "name": "screen-repair",
+  "version": "1.0.0",
+  "description": "Landing page and quote system for a screen repair company.",
+  "main": "server.js",
+  "scripts": {
+    "dev": "run-p wpack serve",
+    "wpack": "webpack --watch",
+    "serve": "nodemon server",
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jake-the-cake/screen-repair.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jake-the-cake/screen-repair/issues"
+  },
+  "homepage": "https://github.com/jake-the-cake/screen-repair#readme"
+}
