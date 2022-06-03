@@ -1,14 +1,11 @@
 {
   "name": "screen-repair",
   "version": "1.0.0",
-  "description": "Landing page and quote system for a screen repair company.",
+  "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "run-p wpack serve",
-    "wpack": "webpack --watch",
-    "serve": "nodemon server",
-    "test": "jest",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +17,15 @@
   "bugs": {
     "url": "https://github.com/jake-the-cake/screen-repair/issues"
   },
-  "homepage": "https://github.com/jake-the-cake/screen-repair#readme"
+  "homepage": "https://github.com/jake-the-cake/screen-repair#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
 }
