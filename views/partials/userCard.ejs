@@ -1,7 +1,8 @@
 <% data.forEach((user)=> { %>
 	<div class="user-card-container">
+		<img class="user-card-image" src="<%= user.image %>" alt="">
 		<div class="user-card-content">
-			<div class="user-card-name"><%= user.name %></div>
+			<div class="user-card-name"><%= user.name[0].toUpperCase() + user.name.slice(1) %></div>
 			<div class="user-card-age"><%= user.age %></div>
 		</div>
 	</div>

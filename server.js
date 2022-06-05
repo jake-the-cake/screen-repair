@@ -9,6 +9,7 @@ dotenv.config()
 /* config */
 const cors = require('cors')
 app.use(cors())
+app.use(express.static('public'))
 app.set('view engine', 'ejs')
 app.set('views', './views')
 
@@ -27,11 +28,23 @@ app.get('/users', (req, res) => {
 	let x = [
 		{
 			name: 'jay',
-			age: 37
+			age: 37,
+			image: '/fake-data/images/man.png'
 		},
 		{
 			name: 'anna',
-			age: 36
+			age: 36,
+			image: '/fake-data/images/woman.png'
+		},
+		{
+			name: 'sophia',
+			age: 9,
+			image: '/fake-data/images/girl.png'
+		},
+		{
+			name: 'angela',
+			age: 0,
+			image: '/fake-data/images/baby.png'
 		}
 	]
 	res.render('users', {data:x,pageTitle:'User List'})

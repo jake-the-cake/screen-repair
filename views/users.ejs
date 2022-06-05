@@ -3,9 +3,12 @@
 <head>
 	<%- include('./partials/meta.ejs') %>
 	<%- include('./partials/title.ejs') %>
+	<%- include('./partials/css.ejs') %>
 </head>
 <body>
 	User List
-	<%- include('./partials/userCard.ejs') %>
+	<div class="user-cards">
+		<%- include('./partials/userCard.ejs') %>
+	</div>
 </body>
 </html>
