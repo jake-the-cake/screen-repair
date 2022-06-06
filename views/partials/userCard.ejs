@@ -1,9 +1,17 @@
 <% data.forEach((user)=> { %>
 	<div class="user-card-container">
-		<img class="user-card-image" src="<%= user.image %>" alt="">
-		<div class="user-card-content">
-			<div class="user-card-name"><%= user.name[0].toUpperCase() + user.name.slice(1) %></div>
-			<div class="user-card-age"><%= user.age %></div>
+		<div class="user-card-left-content">
+			<img class="user-card-image" src="<%= user.image %>" alt="">
+			<div class="user-card-id-container">
+				<div class="user-card-name"><%= user.name[0].toUpperCase() + user.name.slice(1) %></div>
+				<div class="user-card-age"><%= user.age %></div>
+			</div>
+		</div>
+		<div class="user-card-right-content">
+			<span class="user-card-info-line">ID: <%= user._id %></span>
+			<span class="user-card-info-line">Joined: <%= user.newCreatedAt %></span>
+			<span class="user-card-info-line"># Jobs: 0</span>
+			<span class="user-card-info-line">Last Job: N/A</span>
 		</div>
 	</div>
 <% }) %>
