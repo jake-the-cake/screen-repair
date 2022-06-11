@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import UpperImage from './components/UpperImage'
-import { Routes, Route, BrowserRouter } from 'react-router-dom'
+import { Routes, Route, Router } from 'react-router-dom'
 import Home from './pages/Home'
 
 const Container = styled.div`
@@ -18,11 +18,9 @@ function App() {
     <Container>
       <UpperImage />
       <Navbar />
-      <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='*' element={<Home />} />
         </Routes>
-      </BrowserRouter>
       <Footer />
     </Container>    
   )
