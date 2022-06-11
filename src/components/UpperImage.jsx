@@ -2,17 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
-	background-image: url('/screen-repair/images/screen1.jpg');
+	background: url('/screen-repair/images/screen1.jpg') center center no-repeat;
+	background-size: cover;
 	width: 100%;
-	background-position: center;
 	height: 200px;
 `
 
 const UpperImage = () => {
 	return (
-		<Container>
-			
-		</Container>
+		<Container>{/* image container only */}</Container>
 	)
 }
 

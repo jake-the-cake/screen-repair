@@ -3,15 +3,19 @@ import styled from 'styled-components'
 
 const Container = styled.div`
 	width: 100%;
-	background: linear-gradient(to bottom, #004512, #004512, black);
-`
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: space=between;
+	row-gap: 20px;
+	`
 
-const Footer = () => {
+const Quote = () => {
 	return (
 		<Container>
-			Footer
+			Quote page
 		</Container>
 	)
 }
 
-export default Footer
+export default Quote

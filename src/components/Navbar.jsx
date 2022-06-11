@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {Phone} from '@mui/icons-material'
+import { Link } from 'react-router-dom'
 
 const Container = styled.div`
 	background-color: #004512;
@@ -30,8 +31,8 @@ const TitleText = styled.div`
 `
 
 const SubtitleText = styled.div`
-	font-size: 12px;
-	letter-spacing: 4px;
+	font-size: 11px;
+	transform: scaleX(2.2);
 	color: white;
 	display: flex;
 	justify-content: center;
@@ -78,6 +79,7 @@ const LinkContainer = styled.div`
 const LinkText = styled.a`
 	color: white;
 	cursor: pointer;
+	text-decoraction: none;
 
 	&:hover {
 		color: gray;
@@ -99,11 +101,11 @@ const Navbar = () => {
 					</NumberContainer>
 					</InfoContainer>
 				<LinkContainer>
-					<LinkText>Home</LinkText>|
-					<LinkText>Services</LinkText>|
-					<LinkText>Gallery</LinkText>|
-					<LinkText>About Us</LinkText>|
-					<LinkText>Contact</LinkText>
+					<Link to="/"><LinkText>Home</LinkText></Link>|
+					<Link to="/services"><LinkText>Services</LinkText></Link>|
+					<Link to="/gallery"><LinkText>Gallery</LinkText></Link>|
+					<Link to="/about"><LinkText>About Us</LinkText></Link>|
+					<Link to='/contact'><LinkText>Contact</LinkText></Link>
 				</LinkContainer>
 			</LinksAndInfo>
 		</Container>
