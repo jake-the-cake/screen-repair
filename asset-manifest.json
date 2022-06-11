@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/screen-repair/static/css/main.e6c13ad2.css",
-    "main.js": "/screen-repair/static/js/main.717ee989.js",
+    "main.js": "/screen-repair/static/js/main.f60f9897.js",
     "static/js/787.664673e5.chunk.js": "/screen-repair/static/js/787.664673e5.chunk.js",
     "index.html": "/screen-repair/index.html",
     "main.e6c13ad2.css.map": "/screen-repair/static/css/main.e6c13ad2.css.map",
-    "main.717ee989.js.map": "/screen-repair/static/js/main.717ee989.js.map",
+    "main.f60f9897.js.map": "/screen-repair/static/js/main.f60f9897.js.map",
     "787.664673e5.chunk.js.map": "/screen-repair/static/js/787.664673e5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.717ee989.js"
+    "static/js/main.f60f9897.js"
   ]
 }
