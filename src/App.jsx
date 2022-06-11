@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import UpperImage from './components/UpperImage'
-import {Switch, Routes, Route, BrowserRouter} from 'react-router-dom'
+import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import Home from './pages/Home'
 
 const Container = styled.div`

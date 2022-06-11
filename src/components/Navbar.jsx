@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import {Phone} from '@mui/icons-material'
 
 const Container = styled.div`
 	background-color: #004512;
@@ -64,7 +65,7 @@ const Navbar = () => {
 				<SubtitleText>Screen Repair</SubtitleText>
 			</TitleContainer>
 			<LinksAndInfo>
-				<InfoContainer>Call today for a FREE estimate (phone) 123-123-1234</InfoContainer>
+				<InfoContainer>Call today for a FREE estimate <Phone /> 123-123-1234</InfoContainer>
 				<LinkContainer>
 					<LinkText>Home</LinkText>|
 					<LinkText>Services</LinkText>|
