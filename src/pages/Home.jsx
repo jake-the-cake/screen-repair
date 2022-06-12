@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import June from '../components/seasonal-ads/June'
+import { Add } from '@mui/icons-material'
 
 const Container = styled.div`
 	width: 100%;
@@ -10,6 +11,7 @@ const Container = styled.div`
 	align-items: space=between;
 	row-gap: 20px;
 `
+
 const UpperContent = styled.div`
 	display: flex;
 	justify-content: space-between;
@@ -75,6 +77,41 @@ const ImageContainer = styled.div`
 
 const ServicesContainer = styled.div``
 
+const Services = styled.div`
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	column-gap: 15px;
+`
+
+const ServicesTitle = styled.div`
+	font-size: 22px;
+	transform: scaleX(1.8);
+	margin-left: 32px;
+`
+
+const Service = styled.div`
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid rgba(0,0,0,.2);
+`
+
+const ServicesHeader = styled.div`
+	padding: 0px 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+`
+
+const ViewAll = styled.div`
+	font-size: 12px;
+	display: flex;
+	align-items: end;
+	column-gap: 5px;
+`
+
 const Home = () => {
 	document.title = `Thompson Screen Repair - Home`
 
@@ -100,12 +137,21 @@ const Home = () => {
 					</InfoBody>
 				</InfoContainer>
 				<ImageContainer>
-					<img src="screen-repair/images/flyer.jpg" alt="" />
+					<img src="/screen-repair/images/flyer.jpg" alt="" />
 				</ImageContainer>
 			</UpperContent>
 			<LowerContent>
 				<ServicesContainer>
-					Services
+					<ServicesHeader>
+						<ServicesTitle>Services</ServicesTitle>
+						<ViewAll><Add style={{width:'15px',height:'15px'}} />View All</ViewAll>
+					</ServicesHeader>
+					<Services>
+						<Service>Screen Replacement</Service>
+						<Service>Frame Repair</Service>
+						<Service>Just Say 'Hi'</Service>
+						<Service>Build That Grill</Service>
+					</Services>
 				</ServicesContainer>
 			</LowerContent>
 		</Container>

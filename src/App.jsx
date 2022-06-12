@@ -9,9 +9,9 @@ import Quote from './pages/Quote'
 import About from './pages/About'
 import Gallery from './pages/Gallery'
 import Services from './pages/Services'
+import NotFound from './pages/NotFound'
 
 const Container = styled.div`
-  width: 100vw;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -24,7 +24,8 @@ function App() {
       <UpperImage />
       <Navbar />
         <Routes>
-          <Route path='*' element={<Home />} />
+          <Route path='*' element={<NotFound />} />
+          <Route path='/' element={<Home />} />
           <Route path='/quote' element={<Quote />} />
           <Route path='/services' element={<Services />} />         
           <Route path='/gallery' element={<Gallery />} />

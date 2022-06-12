@@ -26,7 +26,7 @@ const TitleText = styled.div`
 	text-shadow: 1px 1px 14px black;
 	border: 1px solid white;
 	padding: 3px 5px;
-	background: url('screen-repair/images/screen-bg.png') center center;
+	background: url('/screen-repair/images/screen-bg.png') center center;
 	background-size: 100px;
 `
 
@@ -67,19 +67,18 @@ const NumberContainer = styled.div`
 const LinkContainer = styled.div`
 	display: flex;
 	column-gap: 10px;
-	font-size: 12px;
+	font-size: 13px;
+	transform: scaleY(.8);
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	align-items: center;
 	margin-top: auto;
 	color: #92ad12;
-	// font-weight: 700;
 `
 
-const LinkText = styled.a`
+const LinkText = styled.span`
 	color: white;
 	cursor: pointer;
-	text-decoraction: none;
 
 	&:hover {
 		color: gray;
@@ -87,6 +86,25 @@ const LinkText = styled.a`
 `
 
 const Navbar = () => {
+	const links = [
+		['/', 'Home'],
+		['/services', 'Services'],
+		['/gallery', 'Gallery'],
+		['/about', 'About Us'],
+		['/contact', 'Contact'],
+	]
+
+	const displayLinks = (links) => {
+		const linkArray = []
+		links.forEach((link, i) => {
+			linkArray.push(<Link key={link[1].replace(' ','-')} to={link[0]} style={{textDecoration:'none'}}><LinkText>{link[1]}</LinkText></Link>)
+			if (i !== links.length - 1) {
+				linkArray.push('|')
+			}
+		})
+		return linkArray
+	}	
+
 	return (
 		<Container>
 			<TitleContainer>
@@ -101,11 +119,7 @@ const Navbar = () => {
 					</NumberContainer>
 					</InfoContainer>
 				<LinkContainer>
-					<Link to="/"><LinkText>Home</LinkText></Link>|
-					<Link to="/services"><LinkText>Services</LinkText></Link>|
-					<Link to="/gallery"><LinkText>Gallery</LinkText></Link>|
-					<Link to="/about"><LinkText>About Us</LinkText></Link>|
-					<Link to='/contact'><LinkText>Contact</LinkText></Link>
+					{ displayLinks(links) }
 				</LinkContainer>
 			</LinksAndInfo>
 		</Container>
