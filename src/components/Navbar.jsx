@@ -8,12 +8,17 @@ const Container = styled.div`
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
+
+	@media only screen and (max-width: 500px) {
+		flex-direction: column;
+	}
 `
 
 const TitleContainer = styled.div`
 	padding: 10px;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	row-gap: 2px;
 `
 
@@ -28,6 +33,8 @@ const TitleText = styled.div`
 	padding: 3px 5px;
 	background: url('/screen-repair/images/screen-bg.png') center center;
 	background-size: 100px;
+	text-align: center;
+	width: fit-content;
 `
 
 const SubtitleText = styled.div`
@@ -43,6 +50,12 @@ const LinksAndInfo = styled.div`
 	flex-direction: column;
 	padding: 10px;
 	align-items: end;
+
+	@media only screen and (max-width: 500px) {
+		align-items: center;
+		row-gap: 10px;
+		flex-direction: column-reverse;
+	}
 `
 
 const InfoContainer = styled.div`
@@ -52,6 +65,11 @@ const InfoContainer = styled.div`
 	align-items: start;
 	column-gap: 20px;
 	color: #92ad12;
+
+	@media only screen and (max-width: 500px) {
+		background-color: rgba(255,255,255,.2);
+		padding: 5px;
+	}
 `
 
 const NumberContainer = styled.div`
@@ -74,6 +92,11 @@ const LinkContainer = styled.div`
 	align-items: center;
 	margin-top: auto;
 	color: #92ad12;
+
+	@media only screen and (max-width: 500px) {
+		font-size: 10px;
+		transform none;
+	}
 `
 
 const LinkText = styled.span`

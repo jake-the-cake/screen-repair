@@ -16,6 +16,10 @@ const UpperContent = styled.div`
 	display: flex;
 	justify-content: space-between;
 	padding: 20px;
+
+	@media only screen and (max-width: 500px) {
+		flex-direction: column;
+	}
 `
 
 const LowerContent = styled.div``
@@ -81,7 +85,11 @@ const Services = styled.div`
 	display: flex;
 	justify-content: space-between;
 	padding: 10px;
-	column-gap: 15px;
+	gap: 15px;
+
+	@media only screen and (max-width: 500px) {
+		flex-wrap: wrap;
+	}
 `
 
 const ServicesTitle = styled.div`
@@ -96,6 +104,7 @@ const Service = styled.div`
 	justify-content: center;
 	align-items: center;
 	border: 1px solid rgba(0,0,0,.2);
+	min-width: 150px;
 `
 
 const ServicesHeader = styled.div`
