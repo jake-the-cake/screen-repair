@@ -24,13 +24,13 @@ function App() {
       <UpperImage />
       <Navbar />
         <Routes>
-          <Route path='*' element={<NotFound />} />
-          <Route path='/' element={<Home />} />
-          <Route path='/quote' element={<Quote />} />
-          <Route path='/services' element={<Services />} />         
-          <Route path='/gallery' element={<Gallery />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/contact' element={<Contact />} />
+          <Route path='/screen-repair/*' element={<NotFound />} />
+          <Route path='/screen-repair/' element={<Home />} />
+          <Route path='/screen-repair/quote' element={<Quote />} />
+          <Route path='/screen-repair/services' element={<Services />} />         
+          <Route path='/screen-repair/gallery' element={<Gallery />} />
+          <Route path='/screen-repair/about' element={<About />} />
+          <Route path='/screen-repair/contact' element={<Contact />} />
         </Routes>
       <Footer />
     </Container>    
