@@ -19,10 +19,15 @@ const UpperContent = styled.div`
 
 	@media only screen and (max-width: 500px) {
 		flex-direction: column;
+		padding-bottom: 0px;
 	}
 `
 
-const LowerContent = styled.div``
+const LowerContent = styled.div`
+	@media only screen and (max-width: 500px) {
+		margin-top: -10px;
+	}
+`
 
 const InfoContainer = styled.div`
 	flex: 1;
@@ -74,6 +79,9 @@ const BlogMessage = styled.div`
 `
 
 const ImageContainer = styled.div`
+	display: flex;
+	justify-content: center;
+
 	img {
 		width: 300px;
 	}

@@ -20,6 +20,10 @@ const TitleContainer = styled.div`
 	flex-direction: column;
 	align-items: center;
 	row-gap: 2px;
+
+	@media only screen and (max-width:500px) {
+		padding-bottom: 0px;
+	}
 `
 
 const TitleText = styled.div`
@@ -96,6 +100,9 @@ const LinkContainer = styled.div`
 	@media only screen and (max-width: 500px) {
 		font-size: 10px;
 		transform none;
+		column-gap: 5px;
+		border-top: 1px solid rgba(255,255,255,.2);
+		padding-top: 10px
 	}
 `
 
