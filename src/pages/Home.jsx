@@ -70,6 +70,7 @@ const SeasonalAd = styled.div`
 	display: flex;
 	justify-content: center;
 	text-align: center;
+	margin-bottom: auto;
 `
 
 const BlogMessage = styled.div`
