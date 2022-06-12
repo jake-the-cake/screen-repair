@@ -17,7 +17,7 @@ const June = () => {
 			<Header>It's June!</Header>
 			<Phrase>June bugs make awful roomates!</Phrase>
 			<Message>Patch up your screens to keep these party animals outside, where they belong.</Message>
-			<Link to="/quote"><Quote>Request A Quote</Quote></Link>
+			<Link to="/screen-repair/quote"><Quote>Request A Quote</Quote></Link>
 		</Container>
 	)
 }

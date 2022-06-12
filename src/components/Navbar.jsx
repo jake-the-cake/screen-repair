@@ -117,11 +117,11 @@ const LinkText = styled.span`
 
 const Navbar = () => {
 	const links = [
-		['/', 'Home'],
-		['/services', 'Services'],
-		['/gallery', 'Gallery'],
-		['/about', 'About Us'],
-		['/contact', 'Contact'],
+		['/screen-repair/', 'Home'],
+		['/screen-repair/services', 'Services'],
+		['/screen-repair/gallery', 'Gallery'],
+		['/screen-repair/about', 'About Us'],
+		['/screen-repair/contact', 'Contact'],
 	]
 
 	const displayLinks = (links) => {
